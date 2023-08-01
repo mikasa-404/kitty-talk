@@ -1,24 +1,22 @@
 import React from "react";
+import { useState } from "react";
 
 
 const Options = (props) => {
-  const options = [
-    {
-      text: "Javascript",
-      handler: props.actionProvider.handleHello,
-      id: 1,
-    },
-    { text: "Python", handler: () => {}, id: 2 },
-    { text: "Golang", handler: () => {}, id: 3 },
-  ];
+  const [clicked, setClicked] = useState(true);
+  const clickHandler = (e) => {
+    setClicked(false);
+    return props.actionProvider.handleHello()
 
-  const buttonsMarkup = options.map((option) => (
-    <button key={option.id} onClick={option.handler} className="option-button">
-      {option.text}
+  };
+
+
+  return <div className="options-container">
+    {console.log(clicked)}
+     <button className="option-button" onClick={clickHandler} style={{ display: clicked ? "visible" : "none" }}>
+      Hello
     </button>
-  ));
-
-  return <div className="options-container">{buttonsMarkup}</div>;
+  </div>;
 };
 
 export default Options;
