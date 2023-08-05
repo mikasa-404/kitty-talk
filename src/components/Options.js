@@ -22,6 +22,10 @@ const Options = (props) => {
       handler: props.actionProvider.handleActivity,
     },
     {
+      name: "Give treat",
+      handler: props.actionProvider.handleTreat,
+    },
+    {
       name: "Say Bye!",
       handler: props.actionProvider.handleBye,
     }

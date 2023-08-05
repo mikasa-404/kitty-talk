@@ -3,6 +3,20 @@
   background-color: #282c34;
   min-height: 100vh;
 }
+.react-chatbot-kit-chat-header{
+  background-color: gray;
+}
+.react-chatbot-kit-chat-input {
+  background-color: rgb(224, 226, 243);
+}
+.react-chatbot-kit-chat-message-container{
+  background-color: rgb(235, 243, 220);
+}
+.react-chatbot-kit-chat-bot-message {
+  box-shadow: 3px 3px #cfcdcd;
+}
+
+
 .header{
   display: flex;
   justify-content: center;
@@ -13,13 +27,59 @@
 .logo{
   height: 4rem;
 }
+.home{
+  margin: auto;
+  color: white;
+  display: flex;
+  justify-content: center ;
+  align-items: center;
+
+}
+.homeimg{
+  height: 30rem;
+  border-radius: 3%;
+  margin-top: 3rem;
+}
+.child{
+  margin: 2rem;
+}
+.chatbot{
+  padding: 5px;
+  font-size: medium;
+  font-weight: bold;
+  background-color: #a2eb6b;
+  border-radius: 8%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.chatbot:hover{
+  background-color: #79ed21;
+  transform: scale(1.03);
+}
+.chatbot:active{
+  background-color: #a2eb6b;
+
+}
 .body{
   margin-top: 2rem;
   display: flex;
-  justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
+.option-button{
+  padding: 4px;
+  background-color: white;
+  border-radius: 10%;
+  border: 2px solid #83af65;
+  transition: 0.2s;
 
+}
+.option-button:hover{
+  transform: scale(1.05);
+}
+.option-button:active{
+  background-color: #a6bd12;
+}
 
 .cat-picture{
   padding: 1px;
@@ -29,4 +89,18 @@
   height: 15rem;
   border-radius: 8%;
   margin-left:2rem;
+}
+.exit{
+  padding: 5px;
+  font-weight: bold;
+  background-color: #ffffff;
+  border: black;
+  border-radius: 8%;
+  cursor: pointer;
+  transition: 0.2s;
+  margin: 1rem;
+}
+.exit:hover{
+  background-color: #ed5721;
+  transform: scale(1.03);
 }

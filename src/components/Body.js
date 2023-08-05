@@ -5,6 +5,7 @@ import MessageParser from "../catbot/MessageParser";
 import Chatbot from "react-chatbot-kit";
 import 'react-chatbot-kit/build/main.css'
 import { createContext } from 'react';
+import { Link } from 'react-router-dom';
 
 export const OptionsContext=createContext({
   i: '',
@@ -22,6 +23,10 @@ const Body = () => {
           messageParser={MessageParser}
         />
         </OptionsContext.Provider>
+        <Link to="/">
+        <button className='exit'>Exit Conversation</button>
+
+        </Link>
       </div>
   )
 }

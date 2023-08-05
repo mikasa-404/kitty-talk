@@ -7,7 +7,7 @@ class ActionProvider {
     //actions
     greet = () => {
       const message = this.createChatBotMessage("Meow Meow! Hello friend!🐾",{
-        delay: 500
+        delay: 700
       });
       this.addMessageToState(message);
     };
@@ -15,13 +15,28 @@ class ActionProvider {
     handleActivity = () => {
       const message2 = this.createClientMessage(
         "What did you do today?",{
-        delay: 500
+        delay: 700,
       }
       );
       this.addMessageToState(message2);
       const message = this.createChatBotMessage(
         "Meow. (I napped and explored around the house.)🐾",{
-          delay: 500,
+          delay: 700,
+          widget: "options",
+        }
+      );
+      this.addMessageToState(message);
+    };
+    handleTreat = () => {
+      const message2 = this.createClientMessage(
+        "How about a treat for being such a good cat?",{
+        delay: 700
+      }
+      );
+      this.addMessageToState(message2);
+      const message = this.createChatBotMessage(
+        "Sounds purr-fect! Meow! Thank you! nom nom nom",{
+          delay: 700,
           widget: "options",
         }
       );
@@ -29,14 +44,14 @@ class ActionProvider {
     };
     handlePics = () => {
       const message2 = this.createClientMessage(
-        "Could you share some of your adorable pictures with us? 🐾",{
-        delay: 500,
+        "Share some of your adorable pictures with us? ",{
+        delay: 700,
       }
       );
       this.addMessageToState(message2);
       const message = this.createChatBotMessage(
-        "Meow. Here you goo🐾",{
-          delay: 500,
+        "Meow. I'll give you one🐾",{
+          delay: 700,
           widget:"picture",
         }
       );
@@ -48,13 +63,13 @@ class ActionProvider {
     handleHow = () => {
       const message2 = this.createClientMessage(
         "Hey there, kitty! How are you today?",{
-          delay: 500
+          delay: 700
         }
       );
       this.addMessageToState(message2);
       const message = this.createChatBotMessage(
         "Meow! I'm doing great, thank you",{
-          delay: 500,
+          delay: 700,
           widget: "options",
 
 
@@ -64,14 +79,14 @@ class ActionProvider {
     };
     handleBye = () => {
       const message2 = this.createClientMessage(
-        "Goodbye, kitty! 🐾 ",{
-          delay: 500
+        "Goodbye, kitty! ",{
+          delay: 700
         }
       );
       this.addMessageToState(message2);
       const message = this.createChatBotMessage(
         "Meow! Meow! (Bye bye) 🐱",{
-          delay: 500
+          delay: 700
         }
       );
       this.addMessageToState(message);

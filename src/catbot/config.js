@@ -9,6 +9,7 @@ const config = {
   initialMessages: [
     createChatBotMessage(`Meow! (Hello!) I am Eve! 🐈‍⬛`, {
       widget: "options",
+      delay: 500,
     }),
   ],
   widgets: [
@@ -23,10 +24,10 @@ const config = {
   ],
   customStyles:{
     botMessageBox: {
-      backgroundColor: '#2EB62C',
+      backgroundColor: '#83af65',
     },
     chatButton: {
-      backgroundColor: '#023020',
+      backgroundColor: '#097969',
     },
 
   }
