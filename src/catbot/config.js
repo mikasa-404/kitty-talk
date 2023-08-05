@@ -16,6 +16,15 @@ const config = {
       widgetFunc: (props) => <Options {...props} />,
     },
   ],
+  customStyles:{
+    botMessageBox: {
+      backgroundColor: '#2EB62C',
+    },
+    chatButton: {
+      backgroundColor: '#5ccc9d',
+    },
+
+  }
 };
 
 export default config;
