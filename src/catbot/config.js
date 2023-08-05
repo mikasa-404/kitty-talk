@@ -4,9 +4,9 @@ import { createChatBotMessage } from "react-chatbot-kit";
 import Options from "../components/Options";
 
 const config = {
-  botName: "LearningBot",
+  botName: "Eve",
   initialMessages: [
-    createChatBotMessage(`Hello. What do you want to learn`, {
+    createChatBotMessage(`Meow! (Hello!) 🐱`, {
       widget: "options",
     }),
   ],

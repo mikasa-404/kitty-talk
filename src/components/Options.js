@@ -1,20 +1,31 @@
 import React from "react";
 import { useState } from "react";
+import { useContext } from "react";
+import OptionsContext from "./OptionsContext";
 
 
 const Options = (props) => {
-  const [clicked, setClicked] = useState(true);
-  const clickHandler = (e) => {
-    setClicked(false);
-    return props.actionProvider.handleHello()
+  const {i}=useContext(OptionsContext);
+  const [displayButton, setDisplayButton] = useState(true);
+  const options=[
+    {
+      name: "Ask what she did today",
+      handler: props.actionProvider.handleActivity,
+    },
+    {
+      name: "Ask how are you",
+      handler: ()=>{},
+    }
+  ]
 
-  };
-
-
-  return <div className="options-container">
-    {console.log(clicked)}
-     <button className="option-button" onClick={clickHandler} style={{ display: clicked ? "visible" : "none" }}>
-      Hello
+  // 
+  return <div className="options-container" style={{ display: displayButton ? "visible" : "none" }}>
+     <button className="option-button" onClick={()=>{
+      setDisplayButton(false);
+      console.log(i);
+      return options[i].handler();
+     }}>
+      {options[i].name}
     </button>
   </div>;
 };

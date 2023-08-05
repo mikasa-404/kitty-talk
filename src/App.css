@@ -2,8 +2,20 @@
   text-align: center;
   background-color: #282c34;
   min-height: 100vh;
+}
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+  box-shadow: 10px 10px white blur;
+}
+.logo{
+  height: 4rem;
+}
+.body{
+  margin-top: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
