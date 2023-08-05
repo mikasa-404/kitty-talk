@@ -14,6 +14,10 @@ const Options = (props) => {
       handler: props.actionProvider.handleHow,
     },
     {
+      name: "Ask for pictures",
+      handler: props.actionProvider.handlePics,
+    },
+    {
       name: "Ask what she did today",
       handler: props.actionProvider.handleActivity,
     },

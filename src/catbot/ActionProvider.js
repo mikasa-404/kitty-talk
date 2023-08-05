@@ -27,6 +27,24 @@ class ActionProvider {
       );
       this.addMessageToState(message);
     };
+    handlePics = () => {
+      const message2 = this.createClientMessage(
+        "Could you share some of your adorable pictures with us? 🐾",{
+        delay: 500,
+      }
+      );
+      this.addMessageToState(message2);
+      const message = this.createChatBotMessage(
+        "Meow. Here you goo🐾",{
+          delay: 500,
+          widget:"picture",
+        }
+      );
+      this.addMessageToState(message);
+      
+
+    };
+  
     handleHow = () => {
       const message2 = this.createClientMessage(
         "Hey there, kitty! How are you today?",{
